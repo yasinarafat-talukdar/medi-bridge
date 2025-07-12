@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medi Bridge</title>
+    <link rel="shortcut icon" href="./src/Logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <!-- header Section -->
+    <header class="py-[37.22px] px-[59.56px]">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center flex-wrap md:flex-nowrap">
+          <!-- Logo -->
+          <div class="flex gap-[7.44px] mb-4 md:mb-0">
+            <img
+              src="./imgs/Logo.png"
+              alt=""
+              class="w-[26.986112594604492px] h-[26.055557250976562px] items-center"
+            />
+            <h1 class="text-[18.61px] font-semibold text-[#101918]">Medi Bridge</h1>
+          </div>
+
+          <!-- Hamburger Icon -->
+          <div class="block md:hidden ml-auto">
+            <button id="menuToggle" class="text-[#101918] focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu -->
+          <nav id="menu" class="w-full md:w-[380px] md:h-[24px] mt-4 md:mt-0 hidden md:block">
+            <ul
+              class="flex md:flex-row flex-col gap-[18px] md:gap-[37.22px] items-start md:items-center"
+            >
+              <li class="font-Jakarta font-medium text-[14.89px] text-[#101918]">
+                <a href="#">About Us</a>
+              </li>
+              <li
+                class="flex font-Jakarta font-medium text-[14.89px] text-[#101918] justify-between items-center gap-[7.44px]"
+              >
+                <a href="#">Features</a>
+                <img
+                  src="./imgs/icons/caret-down.png"
+                  alt=""
+                  class="w-[14.88888931274414px] h-[14.88888931274414px] items-center cursor-pointer"
+                />
+              </li>
+              <li class="font-Jakarta font-medium text-[14.89px] text-[#101918]">
+                <a href="#">Find Doctor</a>
+              </li>
+              <li class="font-Jakarta font-medium text-[14.89px] text-[#101918]">
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Buttons -->
+          <div
+            class="flex gap-[11.17px] items-center mt-4 md:mt-0 w-full md:w-auto justify-start md:justify-end hidden md:flex"
+          >
+            <button
+              class="px-[22.33px] py-[9.31px] bg-[#F9FAFA] font-Jakarta rounded-[7.44px] border-[0.93px] border-[#91959526] font-semibold text-[13.03px] cursor-pointer"
+            >
+              Log in
+            </button>
+            <button
+              class="px-[22.33px] py-[9.31px] text-white font-Jakarta bg-[#017D6E] rounded-[7.44px] font-semibold text-[13.03px] cursor-pointer hover:bg-[#017d6ead]"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Buttons -->
+        <div class="flex gap-[11.17px] items-center mt-4 md:hidden">
+          <button
+            class="px-[22.33px] py-[9.31px] bg-[#F9FAFA] rounded-[7.44px] border-[0.93px] border-[#91959526] font-semibold text-[13.03px] cursor-pointer"
+          >
+            Log in
+          </button>
+          <button
+            class="px-[22.33px] py-[9.31px] text-white bg-[#017D6E] rounded-[7.44px] font-semibold text-[13.03px] cursor-pointer"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-[100px] bg-white relative">
+      <div class="container mx-auto px-4 md:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <!-- Left Side -->
+          <div class="flex flex-col gap-[22px] max-w-[600px] mx-auto md:mx-0">
+            <!-- Badge -->
+            <div
+              class="flex items-center gap-[7.44px] bg-[#E6F2F1] rounded-full border border-[#8AC3BC26] w-fit"
+            >
+              <div class="pl-1 py-1">
+                <img
+                  src="./imgs/icons/Ico Container.png"
+                  alt="Healthcare Icon"
+                  class="w-[33.33px] h-[33.33px]"
+                />
+              </div>
+              <div>
+                <h3
+                  class="text-[#01594E] font-Jakarta font-semibold text-[11.17px] text-center pr-3"
+                >
+                  Top-rated healthcare service
+                </h3>
+              </div>
+            </div>
+
+            <!-- Headline -->
+            <h1
+              class="text-[48px] md:text-[59.56px] font-medium leading-[120%] text-[#101918] font-Jakarta"
+            >
+              Transforming Healthcare for a Better Tomorrow
+            </h1>
+
+            <!-- Description -->
+            <p class="text-[16.75px] text-[#5F6564] leading-[160%] font-Jakarta">
+              With a focus on innovation, compassion, and personalized
+              <br />care, we are committed to guiding you towards a healthier <br />and more vibrant
+              tomorrow.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-[22.33px]">
+              <button
+                class="bg-[#017D6E] text-white py-[11.17px] px-[29.78px] rounded-[7.44px] text-[13.03px] font-semibold font-Jakarta cursor-pointer hover:bg-[#017d6ead]"
+              >
+                Get Started
+              </button>
+              <button
+                class="bg-[#F9FAFA] text-[#101918] border border-[#91959526] py-[11.17px] px-[29.78px] rounded-[7.44px] text-[13.03px] font-semibold font-Jakarta cursor-pointer"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="relative w-full flex justify-center items-center mt-[50px] md:mt-0">
+            <!-- Main doctor image -->
+            <img
+              class="h-[495.05596923828125px] w-[385.25px]"
+              src="./imgs/Image Group.png"
+              alt="Doctor"
+            />
+
+            <!-- Decorative Icons -->
+            <img
+              src="./imgs/icons/Vector.png"
+              alt=""
+              class="absolute w-[108.8233871459961px] h-[86.13742065429688px] top-[93.19px] hidden md:block left-[485px]"
+            />
+            <img
+              src="./imgs/icons/Vector-1.png"
+              alt=""
+              class="absolute w-[108.8233871459961px] h-[86.13742065429688px] top-[399.29px] hidden md:block left-[150.21px]"
+            />
+
+            <!-- Book Now Card -->
+            <div
+              class="absolute left-2 top-[141.44px] bg-white border-[0.93px] border-[#9195953D] rounded-[14.89px] p-4 w-[353.6111145019531px] flex flex-col gap-2 z-20"
+            >
+              <div
+                class="flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between"
+              >
+                <div class="flex gap-[14.89px]">
+                  <div>
+                    <img
+                      src="./imgs/4003ca99f9da8a85a900087c5b94b7c15f2ebc2e.png"
+                      alt="Doctor"
+                      class="w-[74.44444274902344px] h-[93.05555725097656px] bg-[#F9FAFA] rounded-[7.44px] border-[0.93px] border-[#9195953D] object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-[7.44px]">
+                    <span
+                      class="text-[11.17px] font-Jakarta font-medium text-center text-[#01594E] px-[11.17px] py-[3.72px] bg-[#E6F2F1] border-[0.93px] border-[#E6F2F1] rounded-[93.06px]"
+                      >Available</span
+                    >
+                    <h4 class="text-[14.89px] font-Jakarta font-semibold text-[#101918]">
+                      Dr. Andrea G.
+                    </h4>
+                    <p class="text-[13.03px] text-[#5F6564] font-normal font-Jakarta">
+                      Cardiologist
+                    </p>
+                    <div class="flex items-center gap-1">
+                      <span class="text-[14.89px] text-[#017D6E] font-semibold font-Jakarta"
+                        >$55</span
+                      >
+                      <p class="text-[#5F6564] text-[14.89px] font-Jakarta">/ session</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <div class="flex mt-3 sm:mt-0">
+                  <button
+                    class="text-[11.17px] font-Jakarta font-semibold text-[#017D6E] px-[14.89px] py-[11.17px] rounded-full bg-white border-[0.93px] border-[#017D6E] cursor-pointer"
+                  >
+                    <i class="fa-solid fa-phone pr-3 items-center"></i> Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Box -->
+            <div
+              class="absolute bottom-0 right-0 bg-[#01594E] text-white w-[283.8194580078125px] rounded-[14.89px] p-[22.33px] z-20 gap-[22.33px] border-[#34978B] border-[0.93px] hidden md:flex flex-col"
+            >
+              <p class="text-[14.89px] font-Jakarta font-medium text-white leading-[160%]">
+                “The workshops were insightful, the networking opportunities were abundant”
+              </p>
+              <div class="flex justify-between">
+                <div class="flex flex-col gap-[3.72px]">
+                  <p class="font-semibold font-Jakarta text-[13.03px]">Michael Angelo</p>
+                  <p class="text-white font-Jakarta text-[11.17px]">39 years old</p>
+                </div>
+                <img
+                  src="./imgs/quotes.png"
+                  alt=""
+                  class="h-[44.66666793823242px] w-[44.66666793823242px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner -->
+    <section class="py-[44.67px] bg-[#F9FAFA]">
+      <div class="container mx-auto flex flex-col items-center text-center px-4">
+        <h2 class="font-Jakarta font-medium text-[18.61px] text-[#919595] mb-[18.61px]">
+          Trusted by
+        </h2>
+        <img src="./imgs/Partner Logo.png" alt="Partner Logos" class="w-full object-contain" />
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-[59.56px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col gap-[59.56px]">
+          <!-- Heading -->
+          <div class="flex flex-col gap-[22.33px] items-center leading-tight text-center">
+            <h1 class="font-Jakarta font-medium text-[44.67px] text-[#101918]">
+              Experience the Difference
+              <br />
+              in Our Healthcare Approach
+            </h1>
+            <p class="font-Jakarta font-normal text-[#5F6564] text-[16.75px] leading-[160%]">
+              Transform your healthcare journey with our innovative and personalized approach
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div class="mx-auto flex flex-wrap justify-center gap-[50px]">
+            <!-- Card 1 -->
+            <div
+              class="w-[283.8194580078125px] p-[29.78px] rounded-[14.89px] border-[0.93px] border-[#9195953D] text-center shadow-sm bg-white flex flex-col items-center gap-[29.78px]"
+            >
+              <img
+                src="./imgs/icons/Icon Container-1.png"
+                alt="Expert Care Icon"
+                class="w-[67px] h-[67px] rounded-full bg-[#00796B1A] flex items-center justify-center"
+              />
+              <div class="space-y-[10px]">
+                <h2 class="font-Jakarta font-semibold text-[18.6px] text-[#101918] leading-[1.4]">
+                  Expert Care
+                </h2>
+                <p class="font-Jakarta text-[13px] text-[#5F6564] leading-snug">
+                  Our team of experienced healthcare professionals is dedicated to providing the
+                  highest quality.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="w-[284px] p-[30px] rounded-[15px] border border-[#9195953D] text-center shadow-sm bg-white flex flex-col items-center gap-[29.78px]"
+            >
+              <img
+                src="./imgs/icons/WhyUs-2.png"
+                alt="Expert Care Icon"
+                class="w-[67px] h-[67px] rounded-full bg-[#00796B1A] flex items-center justify-center"
+              />
+              <div class="space-y-[10px]">
+                <h2 class="font-Jakarta font-semibold text-[18.6px] text-[#101918] leading-[1.4]">
+                  Personalized Approach
+                </h2>
+                <p class="font-Jakarta text-[13px] text-[#5F6564] leading-snug">
+                  We understand that every patient is unique, which is why we tailor our services to
+                  meet your needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="w-[284px] p-[30px] rounded-[15px] border border-[#9195953D] text-center shadow-sm bg-white flex flex-col items-center gap-[29.78px]"
+            >
+              <img
+                src="./imgs/icons/WhyUs-3.png"
+                alt="Expert Care Icon"
+                class="w-[67px] h-[67px] rounded-full bg-[#00796B1A] flex items-center justify-center"
+              />
+              <div class="space-y-[10px]">
+                <h2 class="font-Jakarta font-semibold text-[18.6px] text-[#101918] leading-[1.4]">
+                  Focus on Wellness
+                </h2>
+                <p class="font-Jakarta text-[13px] text-[#5F6564] leading-snug">
+                  Beyond treating illness, we emphasize preventive care and wellness promotion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="w-[284px] p-[30px] rounded-[15px] border border-[#9195953D] text-center shadow-sm bg-white flex flex-col items-center gap-[29.78px]"
+            >
+              <img
+                src="./imgs/icons/WhyUs-4.png"
+                alt="Expert Care Icon"
+                class="w-[67px] h-[67px] rounded-full bg-[#00796B1A] flex items-center justify-center"
+              />
+              <div class="space-y-[10px]">
+                <h2 class="font-Jakarta font-semibold text-[18.6px] text-[#101918] leading-[1.4]">
+                  Community Connection
+                </h2>
+                <p class="font-Jakarta text-[13px] text-[#5F6564] leading-snug">
+                  We are deeply rooted in the local community and are committed to serving and
+                  giving back.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Service -->
+    <section class="py-[59.56px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-start justify-between gap-[44.67px]">
+          <!-- Image -->
+          <div class="flex-shrink-0 mx-auto lg:mx-0 mb-8 lg:mb-0">
+            <img
+              src="./imgs/Our Service.png"
+              alt="Our Service"
+              class="w-[601px] h-[558px] rounded-[14.89px] object-cover max-w-full"
+            />
+          </div>
+
+          <!-- Text + Cards -->
+          <div class="w-full max-w-[575px] space-y-[44.67px] mx-auto lg:mx-0">
+            <!-- Heading & Description -->
+            <div class="space-y-[22.33px]">
+              <h1 class="font-Jakarta font-medium text-[44.67px] text-[#101219] leading-[140%]">
+                Unveiling a Spectrum of Specialized Offerings
+              </h1>
+              <p class="font-Jakarta font-normal text-[16.75px] text-[#5F6564] leading-[160%]">
+                Discover a tailored approach to your health with our versatile range of specialized
+                services, ensuring every aspect of your healthcare journey is seamlessly addressed.
+              </p>
+            </div>
+
+            <!-- Small Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[22.33px]">
+              <!-- Repeat Card (6x) -->
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Diagnostic Imaging
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Mental Health Services
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Laboratory Services
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Rehabilitation Services
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Home Healthcare
+                </h2>
+              </div>
+
+              <div
+                class="flex items-center p-[18.61px] gap-[14.89px] border border-[#9195953D] rounded-[14.89px]"
+              >
+                <img
+                  src="./imgs/icons/Icon Container-2.png"
+                  alt=""
+                  class="w-[29.78px] h-[29.78px]"
+                />
+                <h2 class="font-Jakarta text-[14.89px] text-[#404746] leading-[160%]">
+                  Geriatric Care
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Doctor -->
+    <section class="py-[50px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col gap-[59.56px]">
+          <div class="gap-[22.33px]">
+            <h1 class="font-Jakarta font-medium text-[44.67px] text-[#101918] text-center">
+              Meet the Healthcare
+              <br />
+              Heroes Ready to Serve You
+            </h1>
+            <p class="font-Jakarta text-[#5F6564] text-[16.75px] text-center">
+              Discover the dedicated professionals behind our exceptional care just for you
+            </p>
+          </div>
+
+          <!-- doctor cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[29.78px]">
+            <!-- Card 1 -->
+            <div class="w-[387.11px] max-w-full mx-auto relative">
+              <!-- Availability Badge -->
+              <h3
+                class="absolute py-[3.72px] px-[14.89px] rounded-full border-[0.93px] border-[#8AC3BC26] bg-[#E6F2F1] text-[#01594E] text-[11.17px] font-Jakarta font-medium mt-[14.89px] ml-[14.89px]"
+              >
+                Available
+              </h3>
+
+              <!-- Doctor Image Card -->
+              <div
+                class="bg-[#F9FAFA] rounded-[14.89px] border-[0.93px] border-[#9195953D] flex justify-center items-center mx-auto"
+              >
+                <img src="./imgs/dr1.png" alt="" class="mt-[29.78px] max-w-full" />
+              </div>
+
+              <!-- Doctor Info and Button -->
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between sm:justify-between py-[20px] gap-[3.72px] text-center sm:text-left"
+              >
+                <div class="flex flex-col items-center sm:items-start">
+                  <h2
+                    class="font-Jakarta font-semibold text-[18.61px] text-[#101918] leading-[140%]"
+                  >
+                    Dr. Harry Marcelo
+                  </h2>
+                  <p class="font-Jakarta text-[13.03px] text-[#5F6564] leading-[160%]">
+                    Endocrinologist
+                  </p>
+                  <h2 class="text-[18.61px] font-Jakarta font-semibold text-[#017D6E] pt-[10px]">
+                    $64 <span class="font-Jakarta font-normal text-[#5F6564]">/ session</span>
+                  </h2>
+                </div>
+                <button
+                  class="py-[11.17px] px-[29.78px] text-[#017D6E] border-[0.93px] rounded-full border-[#017D6E] bg-white gap-[7.44px] cursor-pointer font-Jakarta font-semibold text-[13.03px] mt-4 sm:mt-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone pr-[10px] text-xl"></i>
+                  Book Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[387.11px] max-w-full mx-auto relative">
+              <h3
+                class="absolute py-[3.72px] px-[14.89px] rounded-full border-[0.93px] border-[#8AC3BC26] bg-[#E6F2F1] text-[#01594E] text-[11.17px] font-Jakarta font-medium mt-[14.89px] ml-[14.89px]"
+              >
+                Available
+              </h3>
+              <div
+                class="bg-[#F9FAFA] rounded-[14.89px] border-[0.93px] border-[#9195953D] flex justify-center items-center mx-auto"
+              >
+                <img src="./imgs/dr2.png" alt="" class="mt-[29.78px] max-w-full" />
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between sm:justify-between py-[20px] gap-[3.72px] text-center sm:text-left"
+              >
+                <div class="flex flex-col items-center sm:items-start">
+                  <h2
+                    class="font-Jakarta font-semibold text-[18.61px] text-[#101918] leading-[140%]"
+                  >
+                    Dr. Putri Raviola
+                  </h2>
+                  <p class="font-Jakarta text-[13.03px] text-[#5F6564] leading-[160%]">
+                    Cardiologist
+                  </p>
+                  <h2 class="text-[18.61px] font-Jakarta font-semibold text-[#017D6E] pt-[10px]">
+                    $72 <span class="font-Jakarta font-normal text-[#5F6564]">/ session</span>
+                  </h2>
+                </div>
+                <div class="flex justify-center sm:justify-end">
+                  <button
+                    class="py-[11.17px] px-[29.78px] text-[#017D6E] border-[0.93px] rounded-full border-[#017D6E] bg-white gap-[7.44px] cursor-pointer font-Jakarta font-semibold text-[13.03px] mt-4 sm:mt-0 flex items-center justify-center"
+                  >
+                    <i class="fa-solid fa-phone pr-[10px] text-xl"></i>
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[387.11px] max-w-full mx-auto relative">
+              <h3
+                class="absolute py-[3.72px] px-[14.89px] rounded-full border-[0.93px] border-[#8AC3BC26] bg-[#E6F2F1] text-[#01594E] text-[11.17px] font-Jakarta font-medium mt-[14.89px] ml-[14.89px]"
+              >
+                Available
+              </h3>
+              <div
+                class="bg-[#F9FAFA] rounded-[14.89px] border-[0.93px] border-[#9195953D] flex justify-center items-center mx-auto"
+              >
+                <img src="./imgs/dr3.png" alt="" class="mt-[29.78px] max-w-full" />
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between sm:justify-between py-[20px] gap-[3.72px] text-center sm:text-left"
+              >
+                <div class="flex flex-col items-center sm:items-start">
+                  <h2
+                    class="font-Jakarta font-semibold text-[18.61px] text-[#101918] leading-[140%]"
+                  >
+                    Dr. Niky Jeremiah
+                  </h2>
+                  <p class="font-Jakarta text-[13.03px] text-[#5F6564] leading-[160%]">
+                    Dermatologist
+                  </p>
+                  <h2 class="text-[18.61px] font-Jakarta font-semibold text-[#017D6E] pt-[10px]">
+                    $88 <span class="font-Jakarta font-normal text-[#5F6564]">/ session</span>
+                  </h2>
+                </div>
+                <button
+                  class="py-[11.17px] px-[29.78px] text-[#017D6E] border-[0.93px] rounded-full border-[#017D6E] bg-white gap-[7.44px] cursor-pointer font-Jakarta font-semibold text-[13.03px] mt-4 sm:mt-0 flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-phone pr-[10px] text-xl"></i>
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-auto mt-[20px]">
+            <button
+              class="py-[11.17px] px-[29.78px] bg-[#F9FAFA] border-[0.93px] border-[#91959526] rounded-[7.44px] font-Jakarta font-semibold text-[13.03px] text-[#101918] leading-[160%] inline-block cursor-pointer"
+            >
+              See All Doctors
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-[60px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col gap-[59.56px]">
+          <div class="flex flex-col gap-[22.33px]">
+            <h1
+              class="font-Jakarta font-medium text-[#101918] text-[44.67px] leading-[140%] text-center justify-center"
+            >
+              See What Our
+              <br />Patients Have to Say
+            </h1>
+            <p
+              class="font-Jakarta text-[#5F6564] text-[16.75px] leading-[140%] text-center justify-center"
+            >
+              Discover firsthand accounts of our patients' experiences
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[29.78px] justify-center">
+            <!-- Card-1 -->
+            <div
+              class="flex flex-col p-[29.78px] max-w-full w-[387.1111145019531px] h-[372.22222900390625px] bg-[#F9FAFA] rounded-[14.89px] border-[0.93px] border-[#9195953D] justify-between mx-auto"
+            >
+              <p class="font-Jakarta text-[18.61px] text-[#101918] leading-[160%]">
+                "Medi Bridge has been a true lifesaver for me and my family. When my father fell
+                ill, we turned to them for help, and they exceeded our expectations in every way."
+              </p>
+              <div class="flex items-center gap-3 mt-4">
+                <img
+                  src="./imgs/Avatar.png"
+                  alt=""
+                  class="w-[44.66666793823242px] h-[44.66666793823242px] rounded-full"
+                />
+                <div>
+                  <h2 class="font-Jakarta font-semibold text-[14.89px] text-[#101918]">
+                    Mecca Rachel
+                  </h2>
+                  <p class="font-Jakarta text-[#5F6564] text-[13.03px]">24 years old</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card-2 (Video) -->
+            <div
+              class="relative p-[29.78px] max-w-full w-[387.1111145019531px] h-[372.22222900390625px] rounded-[14.89px] overflow-hidden justify-between mx-auto"
+            >
+              <!-- Background Image -->
+              <img
+                src="./imgs/thumbnail.jpg"
+                alt="Video Thumbnail"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <!-- Play Button -->
+                <button
+                  class="w-[59.55555725097656px] h-[59.55555725097656px] bg-white text-black rounded-full flex items-center justify-center shadow-lg transition duration-300"
+                >
+                  <img src="./imgs/play.jpg" alt="" />
+                </button>
+              </div>
+              <div class="relative top-68 px-2">
+                <h2 class="font-Jakarta font-semibold text-[14.89px] text-white">Ninda Marsudi</h2>
+                <p class="font-Jakarta text-white text-[13.03px]">38 years old</p>
+              </div>
+            </div>
+
+            <!-- Card-3 -->
+            <div
+              class="flex flex-col p-[29.78px] max-w-full w-[387.1111145019531px] h-[372.22222900390625px] bg-[#F9FAFA] rounded-[14.89px] border-[0.93px] border-[#9195953D] justify-between mx-auto"
+            >
+              <p class="font-Jakarta text-[18.61px] text-[#101918] leading-[160%]">
+                "I've been a patient at Medi Bridge for years, and they consistently deliver
+                outstanding care. Their dedication to patient well-being is evident in every
+                interaction."
+              </p>
+              <div class="flex items-center gap-3 mt-4">
+                <img
+                  src="./imgs/Avatar2.png"
+                  alt=""
+                  class="w-[44.66666793823242px] h-[44.66666793823242px] rounded-full"
+                />
+                <div>
+                  <h2 class="font-Jakarta font-semibold text-[14.89px] text-[#101918]">
+                    Adam ackson
+                  </h2>
+                  <p class="font-Jakarta text-[#5F6564] text-[13.03px]">27 years old</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-auto gap-[7.44px]">
+            <button
+              class="py-[11.17px] px-[29.78px] bg-[#F9FAFA] border-[0.93px] border-[#91959526] rounded-[7.44px] inline-block font-Jakarta font-semibold text-[13.03px] text-[#101918] leading-[160%] items-center cursor-pointer"
+            >
+              See All Testimonials
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-[50px]">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+          <!-- Left Side -->
+          <div class="flex flex-col gap-[44.67px] max-w-md">
+            <div class="flex flex-col gap-[22.33px]">
+              <h1 class="font-Jakarta font-medium text-[44.67px] text-[#101918] leading-[140%]">
+                Frequently <br />Asked Questions
+              </h1>
+              <p class="font-Jakarta text-[#5F6564] text-[16.75px] leading-[160%]">
+                Still have something to ask? Contact our sales team
+              </p>
+            </div>
+            <div>
+              <button
+                class="font-Jakarta py-[11.17px] px-[29.78px] bg-[#F9FAFA] rounded-[7.44px] border-[0.93px] border-[#91959526] cursor-pointer"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side: FAQ Items -->
+          <div class="flex flex-col w-full max-w-[652.32px] gap-[22.33px]">
+            <!-- Open FAQ -->
+            <div
+              class="flex flex-col rounded-[14.89px] border-[0.93px] border-[#9195953D] overflow-hidden"
+            >
+              <div
+                class="flex bg-[#017D6E] p-[29.78px] items-center justify-between cursor-pointer select-none"
+              >
+                <h2 class="font-Jakarta font-semibold text-[22.33px] text-white leading-[140%]">
+                  How do I schedule an appointment?
+                </h2>
+                <img
+                  src="./imgs/icons/caret-up.png"
+                  alt="Collapse"
+                  class="w-[22.33px] h-[22.33px]"
+                />
+              </div>
+              <p
+                class="font-Jakarta font-normal text-[14.89px] bg-[#F9FAFA] text-[#5F6564] leading-[160%] p-[29.78px]"
+              >
+                Scheduling an appointment at Medi Bridge is easy. You can call our office directly
+                or use our online appointment booking system on our website. Simply select your
+                preferred date and time, and our staff will confirm your appointment promptly.
+              </p>
+            </div>
+
+            <!-- Closed FAQs -->
+            <div
+              class="flex rounded-[14.89px] border-[0.93px] bg-[#F9FAFA] border-[#9195953D] p-[29.78px] items-center justify-between cursor-pointer select-none"
+            >
+              <h2 class="font-Jakarta font-semibold text-[22.33px] text-[#101918] leading-[140%]">
+                What types of healthcare services does we offer?
+              </h2>
+              <img
+                src="./imgs/icons/caret-down@2x.png"
+                alt="Expand"
+                class="w-[22.33px] h-[22.33px]"
+              />
+            </div>
+
+            <div
+              class="flex rounded-[14.89px] border-[0.93px] bg-[#F9FAFA] border-[#9195953D] p-[29.78px] items-center justify-between cursor-pointer select-none"
+            >
+              <h2 class="font-Jakarta font-semibold text-[22.33px] text-[#101918] leading-[140%]">
+                Are walk-in appointments available?
+              </h2>
+              <img
+                src="./imgs/icons/caret-down@2x.png"
+                alt="Expand"
+                class="w-[22.33px] h-[22.33px]"
+              />
+            </div>
+
+            <div
+              class="flex rounded-[14.89px] border-[0.93px] bg-[#F9FAFA] border-[#9195953D] p-[29.78px] items-center justify-between cursor-pointer select-none"
+            >
+              <h2 class="font-Jakarta font-semibold text-[22.33px] text-[#101918] leading-[140%]">
+                Does Medi Bridge accept insurance plans?
+              </h2>
+              <img
+                src="./imgs/icons/caret-down@2x.png"
+                alt="Expand"
+                class="w-[22.33px] h-[22.33px]"
+              />
+            </div>
+
+            <div
+              class="flex rounded-[14.89px] border-[0.93px] bg-[#F9FAFA] border-[#9195953D] p-[29.78px] items-center justify-between cursor-pointer select-none"
+            >
+              <h2 class="font-Jakarta font-semibold text-[22.33px] text-[#101918] leading-[140%]">
+                What safety measures does Medi Bridge have?
+              </h2>
+              <img
+                src="./imgs/icons/caret-down@2x.png"
+                alt="Expand"
+                class="w-[22.33px] h-[22.33px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="pt-[100px]">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col bg-[url(./imgs/Banner.png)] bg-center bg-cover w-full max-w-[1220.89px] p-[59.56px] rounded-[14.89px] justify-center items-center mx-auto"
+        >
+          <div class="flex flex-col items-center gap-[44.67px]">
+            <div class="flex flex-col gap-[22.33px]">
+              <h1
+                class="font-Jakarta font-semibold text-[44.67px] text-white leading-[140%] text-center"
+              >
+                Discover Comprehensive <br />
+                Care Tailored to Your Needs
+              </h1>
+              <p
+                class="font-Jakarta text-[14.89px] text-[#F9FAFA] leading-[160%] opacity-[75%] text-center"
+              >
+                Experience personalized healthcare solutions designed to prioritize your well-being
+              </p>
+            </div>
+
+            <div>
+              <button
+                class="font-Jakarta font-semibold py-[11.17px] px-[29.78px] bg-[#F9FAFA] text-[13.03px] rounded-[7.44px] border-[0.93px] border-[#91959526] cursor-pointer"
+              >
+                Make an Appointment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-[60px]">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between p-[74.44px] lg:gap-0 gap-10">
+          <div
+            class="flex flex-col w-full lg:w-[704.4306030273438px] gap-[22.33px] items-center lg:items-start text-center lg:text-left"
+          >
+            <div class="flex gap-[7.44px] items-center justify-center lg:justify-start">
+              <img src="../imgs/Logo.png" alt="Medi Bridge Logo" />
+              <h2 class="font-Jakarta font-semibold text-[18.61px] text-[#101918] leading-[140%]">
+                Medi Bridge
+              </h2>
+            </div>
+            <p class="font-Jakarta font-medium text-[14.89px] text-[#101918] leading-[160%]">
+              Empowering Health, Inspiring Lives.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col lg:flex-row gap-[111.67px] items-center lg:items-start text-center lg:text-left"
+          >
+            <div class="flex flex-col gap-[11.17px] min-w-[150px]">
+              <h3 class="font-Jakarta font-semibold text-[14.89px] text-[#101918]">Company</h3>
+              <ul class="flex flex-col gap-[11.17px]">
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">About Us</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Careers</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Doctors</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col gap-[11.17px] min-w-[150px]">
+              <h3 class="font-Jakarta font-semibold text-[14.89px] text-[#101918]">Services</h3>
+              <ul class="flex flex-col gap-[11.17px]">
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Clinics</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]">
+                  <a href="#">Healthcare</a>
+                </li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]">
+                  <a href="#">Training Center</a>
+                </li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]">
+                  <a href="#">Online Consultation</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col gap-[11.17px] min-w-[150px]">
+              <h3 class="font-Jakarta font-semibold text-[14.89px] text-[#101918]">Social Media</h3>
+              <ul class="flex flex-col gap-[11.17px]">
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]">
+                  <a href="#">Instagram</a>
+                </li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Facebook</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">Twitter</a></li>
+                <li class="font-Jakarta text-[14.89px] text-[#5F6564]"><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-[22.33px] mt-10">
+          <div class="border-t-[0.93px] border-[#919595] opacity-[20%] w-full"></div>
+          <div class="flex flex-col lg:flex-row justify-between items-center gap-4 text-center">
+            <p class="font-Jakarta text-[14.89px] text-[#101918] opacity-[40%]">
+              © Copyright Medi Bridge 2024
+            </p>
+            <ul class="flex flex-wrap gap-[37.22px] justify-center opacity-[40%]">
+              <li class="font-Jakarta text-[14.89px] text-[#101918] leading-[160%]">
+                <a href="#">FAQ</a>
+              </li>
+              <li class="font-Jakarta text-[14.89px] text-[#101918] leading-[160%]">
+                <a href="#">Terms of Condition</a>
+              </li>
+              <li class="font-Jakarta text-[14.89px] text-[#101918] leading-[160%]">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="font-Jakarta text-[14.89px] text-[#101918] leading-[160%]">
+                <a href="#">Changelog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
